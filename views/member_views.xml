@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- perpus.member tree view -->
+    <record id="perpus_member_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Member</field>
+        <field name="model">perpus.member</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="id_member"/>
+                <field name="alamat"/>
+                <field name="kelas"/>
+                <field name="jurusan"/>
+                <field name="jenis_kelamin"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- perpus.buku form view -->
+    <record id="perpus_buku_view_form" model="ir.ui.view">
+        <field name="name">Daftar Member</field>
+        <field name="model">perpus.member</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="id_member"/>
+                        <field name="alamat"/>
+                        <field name="kelas"/>
+                        <field name="jurusan"/>
+                        <field name="jenis_kelamin"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- perpus.member action window -->
+    <record id="perpus_member_action" model="ir.actions.act_window">
+        <field name="name">Daftar Member</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">perpus.member</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem
+        id="perpus_member_menu_act"
+        name="Daftar Member"
+        parent="perpus_member_menu_categ"
+        action="perpus_member_action"
+        sequence="15"/>
+
+</odoo>

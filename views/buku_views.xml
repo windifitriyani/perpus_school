@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- perpus.buku tree view -->
+    <record id="perpus_buku_view_tree" model="ir.ui.view">
+        <field name="name">Jenis Buku</field>
+        <field name="model">perpus.buku</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="kode"/>
+                <field name="name"/>
+                <field name="img" widget="image"/>
+                <field name="penulis"/>
+                <field name="penerbit"/>
+                <field name="tahun_terbit"/>
+                <field name="jenis_buku"/>
+                <field name="buku_mapel_kelas"/>
+                <field name="stok"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- perpus.buku form view -->
+    <record id="perpus_buku_view_form" model="ir.ui.view">
+        <field name="name">Daftar Buku</field>
+        <field name="model">perpus.buku</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="kode"/>
+                        <field name="name"/>
+                        <field name="img" widget="image"/>
+                        <field name="penulis"/>
+                        <field name="penerbit"/>
+                        <field name="tahun_terbit"/>
+                        <field name="jenis_buku"/>
+                        <field name="buku_mapel_kelas"/>
+                        <field name="stok"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- perpus.buku action window -->
+    <record id="perpus_buku_action" model="ir.actions.act_window">
+        <field name="name">Daftar Buku</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">perpus.buku</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem
+        id="perpus_buku_menu_act"
+        name="Daftar Buku"
+        parent="perpus_buku_menu_categ"
+        action="perpus_buku_action"
+        sequence="10"/>
+
+</odoo>

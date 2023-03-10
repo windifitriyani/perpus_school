@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem 
+        id="perpus_menu_root" 
+        name="Perpustakaan Sekolah" 
+        sequence="10"/>
+    <menuitem 
+        id="perpus_buku_menu_categ" 
+        name="Buku" 
+        parent="perpus_menu_root" 
+        sequence="10"/>
+    <menuitem
+        id="perpus_pegawai_menu_categ"
+        name="Pegawai Perpus"
+        parent="perpus_menu_root" 
+        sequence="20"/>
+    <menuitem 
+        id="perpus_peminjaman_buku_menu_categ" 
+        name="Peminjaman Buku" 
+        parent="perpus_menu_root" 
+        sequence="30"/>
+    <menuitem 
+        id="perpus_pengembalian_menu_categ" 
+        name="Pengembalian Buku" 
+        parent="perpus_menu_root" 
+        sequence="40"/>
+    <menuitem 
+        id="perpus_member_menu_categ" 
+        name="Daftar Member" 
+        parent="perpus_menu_root" 
+        sequence="45"/>
+
+    
+
+
+
+</odoo>

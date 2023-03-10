@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- perpus.pegawai tree view -->
+    <record id="perpus_pegawai_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Pegawai</field>
+        <field name="model">perpus.pegawai</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="kode_pegawai"/>
+                <field name="nama"/>
+                <field name="alamat"/>
+                <field name="ttl"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- perpus.pegawai form view -->
+    <record id="perpus_pegawai_view_form" model="ir.ui.view">
+        <field name="name">Daftar Pegawai</field>
+        <field name="model">perpus.pegawai</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="kode_pegawai"/>
+                        <field name="nama"/>
+                        <field name="alamat"/>
+                        <field name="ttl"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- perpus.pegawai action window -->
+    <record id="perpus_pegawai_action" model="ir.actions.act_window">
+        <field name="name">Daftar Pegawai</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">perpus.pegawai</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem
+        id="perpus_pegawai_menu_act"
+        name="Daftar Pegawai"
+        parent="perpus_pegawai_menu_categ"
+        action="perpus_pegawai_action"
+        sequence="10"/>
+
+</odoo>
